@@ -4,8 +4,8 @@
 ;; From: https://github.com/flyingmachine/emacs-for-clojure/blob/master/customizations/setup-js.el
 
 ;; javascript / html
-(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
-(add-hook 'js-mode-hook 'subword-mode)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-hook 'js2-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
 (setq js-indent-level 2)
 (eval-after-load "sgml-mode"
