@@ -23,16 +23,16 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (delete-selection-mode t)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
+;;(tool-bar-mode -1)
 (blink-cursor-mode t)
 (show-paren-mode t)
 (column-number-mode t)
-(set-fringe-style -1)
+;;(set-fringe-style -1)
 (tooltip-mode -1)
 
 (menu-bar-mode -1)
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 
 (global-linum-mode t)                    ;; show line numbers
 (size-indication-mode t)                 ;; show file size (emacs 22+)

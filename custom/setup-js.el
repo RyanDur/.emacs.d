@@ -1,29 +1,43 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Author: flyingmachine
-;; Title: setup-js.el
-;; From: https://github.com/flyingmachine/emacs-for-clojure/blob/master/customizations/setup-js.el
-
-;; javascript / html
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(add-hook 'js2-mode-hook 'subword-mode)
-(add-hook 'html-mode-hook 'subword-mode)
-(setq js-indent-level 2)
-(eval-after-load "sgml-mode"
-  '(progn
-     (require 'tagedit)
-     (tagedit-add-paredit-like-keybindings)
-     (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 
 
-;; coffeescript
-(add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
-(add-hook 'coffee-mode-hook 'subword-mode)
-(add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
-(add-hook 'coffee-mode-hook
-          (defun coffee-mode-newline-and-indent ()
-            (define-key coffee-mode-map "\C-j" 'coffee-newline-and-indent)
-            (setq coffee-cleanup-whitespace nil)))
-(custom-set-variables
- '(coffee-tab-width 2))
+(require 'flycheck)                                  ;;
+;;
+(add-hook 'js2-jsx-mode-hook                         ;;
+          (lambda () (flycheck-mode t)))             ;;
+;;
+;; disable jshint since we prefer eslint checking    ;;
+(setq-default flycheck-disabled-checkers             ;;
+              (append flycheck-disabled-checkers     ;;
+                      '(javascript-jshint)))         ;;
+;;
+;; disable json-jsonlist checking for json files     ;;
+(setq-default flycheck-disabled-checkers             ;;
+              (append flycheck-disabled-checkers     ;;
+                      '(json-jsonlist)))             ;;
+;;
+;; use eslint with web-mode for js files             ;;
+(flycheck-add-mode 'javascript-eslint 'js2-jsx-mode) ;;
+;;
+;;
+(when (memq window-system '(mac ns))                 ;;
+  (exec-path-from-shell-initialize))                 ;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-hook 'js2-jsx-mode-hook 'ac-js2-mode)
+(add-hook 'js2-jsx-mode-hook #'js2-refactor-mode)
+
+;;(load "~/.emacs.d/elpa/jsfmt-20150727.1525")
+(add-hook 'before-save-hook 'jsfmt-before-save)
+
+(defun align-to-equals (begin end)
+  "Align region to equal signs"
+  (interactive "r")
+  (align-regexp begin end
+                (rx (group (zero-or-more (syntax whitespace))) "=") 1 1))
+
+(defun align-to-from (begin end)
+  "Align region to from"
+  (interactive "r")
+  (align-regexp begin end
+                (rx (group (zero-or-more (syntax whitespace))) "from") 1 1))
