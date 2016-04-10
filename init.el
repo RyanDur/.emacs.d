@@ -99,6 +99,7 @@
 (load "setup-js.el")
 (load "shell-integration.el")
 (load "tree.el")
+
 ;;(load "lisp.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-auto-revert-mode 1)
