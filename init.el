@@ -87,7 +87,7 @@
 (load "mypopup.el")
 (load "editing.el")
 (load "elisp-editing.el")
-;;; (load "auto-complete.el")
+(load "auto-complete.el")
 (load "auto-indent.el")
 (load "spellcheck.el")
 (load "undo.el")
@@ -99,6 +99,7 @@
 (load "setup-js.el")
 (load "shell-integration.el")
 (load "tree.el")
+(load "docker-mode.el")
 
 ;;(load "lisp.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -129,4 +130,7 @@
  '(js2-tab-width 2)
  '(json-reformat:indent-width 2)
  '(jsx-indent-level 2)
- '(jsx-syntax-check-mode "compile"))
+ '(jsx-syntax-check-mode "compile")
+ '(package-selected-packages
+   (quote
+    (dockerfile-mode yaml-mode zenburn-theme yard-mode web-mode undo-tree ujelly-theme tagedit smex slime-js slim-mode skewer-mode scss-mode scala-outline-popup ruby-tools ruby-refactor ruby-hash-syntax ruby-additional rspec-mode rainbow-delimiters projectile paredit nzenburn-theme neotree multi-term load-theme-buffer-local late-night-theme jsfmt ir-black-theme inf-ruby ido-ubiquitous heroku-theme haskell-mode gruber-darker-theme gratuitous-dark-theme go-mode github-theme gandalf-theme flymake-jslint flycheck flatland-theme exec-path-from-shell ensime emmet-mode deep-thought-theme color-theme-railscasts coffee-mode clues-theme clojure-mode-extra-font-locking cider base16-theme ac-slime))))

@@ -8,7 +8,7 @@
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/containers/" . "Root/")
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/" . "constants/")
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/" . "app/")
- ("/Users/ryandurling/.emacs.d/elpa/" . "jsfmt-20150727.1525/")
+ ("/Users/ryandurling/.emacs.d/elpa/" . "dockerfile-mode-0.1/")
  ("/Users/ryandurling/practice/webpack/noob2/" . "app/")
  ("/Users/ryandurling/practice/js-prac/redux/isomorphic-redux/shared/" . "components/")
  ("/Users/ryandurling/practice/js-prac/redux/isomorphic-redux/" . "client/")
@@ -171,17 +171,20 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/ryandurling/.emacs.d/custom/"
+ "/Users/ryandurling/.emacs.d/elpa/"
+ "/Users/ryandurling/.emacs.d/"
+ "/Users/ryandurling/practice/docker-prac/ci/j8mysql/"
+ "/Users/ryandurling/practice/docker-prac/chap7/composeapp/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/constants/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/containers/Root/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/actions/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/reducers/"
- "/Users/ryandurling/.emacs.d/custom/"
  "/Users/ryandurling/.oh-my-zsh/themes/"
  "/Users/ryandurling/"
  "/Users/ryandurling/work/shopping/pp-shopping/config/webpack/"
  "/Users/ryandurling/work/shopping/pp-shopping/app/containers/Root/"
- "/Users/ryandurling/.emacs.d/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/store/"
  "/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/components/"
  "/Users/ryandurling/work/shopping/pp-shopping/config/webpack_conf/"
@@ -218,27 +221,42 @@
  "/Users/ryandurling/work/core/pp-core/components/analytics/db/migrate/"
  "/Users/ryandurling/practice/foo/"
  "~/work/core/pp-core/app/models/"
- "/Users/ryandurling/work/core/pp-core/"
- "/Users/ryandurling/work/core/pp-core/components/analytics/"
- "/Users/ryandurling/work/core/pp-core/app/assets/javascripts/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "ActionTypes.js"
- "index.js"
- "app.js"
- "ProductActions.js"
- "ProductReducer.js"
- "UserReducer.js"
+ "docker-mode.el"
+ "auto-complete.el"
+ "0blayout-readme.txt"
+ "init.el"
+ "Dockerfile"
+ "requirements.txt"
+ "ido.last"
  "setup-js.el"
- "robbyrussell.zsh-theme"
- ".zshrc-e"
- ".zshrc"
+ "setup-clojure.el"
+ "ruby.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/ryandurling/" (22890 22018 0 0) "workspace/" "work/" "VirtualBox VMs/" "urlbst/" "tmp/" "school/" "PULSE_1.log" "PULSE_0.log" "Public/" "print-output" "practice/" "Pictures/" "pgfgantt.log" "OneDrive/" "npm/" "Music/" "Movies/" "Library/" "latexPrac/" "home/" "go/" "fonts/" "floobits/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "coursework2/" "config/" "bst/" "bin/" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".zcompdump-Ryan’s MacBook Pro-5.0.7" ".zcompdump-Ryan’s MacBook Pro-5.0.5" ".zcompdump-Ryan’s MacBook Pro-5.0.2" ".zcompdump-Phoebe-5.2" ".zcompdump-Phoebe-5.0.8" ".zcompdump-Phoebe-5.0.5" ".zcompdump-Marian-5.0.5" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".wget-hsts" ".WebStorm10/" ".viminfo" ".vagrant.d/" ".travis/" ".Trash/" ".tracker" ".tmuxinator/" ".tmux.config" ".terminfo/" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rvm/" ".RubyMine70/" ".rnd" ".rediscli_history" ".recentf" ".profile" ".pivotal_ide_prefs/" ".p4tickets" ".oracle_jre_usage/" ".oh-my-zsh/" ".nvm/" ".npmrc" ".npm-old-and-busted/" ".npm/" ".node-gyp/" ".netrc" ".mysql_history" ".my.cnf" ".mongorc.js" ".minio/" ".mc/" ".m2/" ".local/" ".lesshst" ".lein/" ".jssc/" ".jenkins/" ".ivy2/" ".irb-history" ".IntelliJIdea14/" ".ido.last~" ".ido.last" ".idea-build/" ".httpie/" ".heroku/" ".gradle/" ".gitconfig~" ".gitconfig" ".ghci" ".ghc/" ".gemfire/" ".gem/" ".fontconfig/" ".flyrc" ".floorc.json" ".emacs.d/" ".DS_Store" ".dropbox/" ".docker/" ".dbshell" ".config/" ".CFUserTextEncoding" ".cf/" ".cache/" ".cabal/" ".bower/" ".bashrc" ".bash_profile" ".bash_history" ".android/" ".activator/" ".#.ido.last" "../" "./")
+
+ ("/Users/ryandurling/.emacs.d/elpa/" (22890 21602 0 0) "zenburn-theme-20170511.1337/" "yasnippet-20170624.803/" "yard-mode-readme.txt" "yard-mode-20160310.850/" "yaml-mode-readme.txt" "yaml-mode-20170406.241/" "web-mode-20170709.922/" "undo-tree-readme.txt" "undo-tree-20170706.246/" "ujelly-theme-20170607.206/" "tagedit-20161121.55/" "spinner-1.7.3/" "smex-20151212.1409/" "slime-repl-20100404/" "slime-js-0.0.1/" "slime-20170705.643/" "slim-mode-20140611.950/" "skewer-mode-readme.txt" "skewer-mode-20170709.939/" "simple-httpd-readme.txt" "simple-httpd-20170125.1910/" "seq-2.20/" "scss-mode-20150107.1400/" "scala-outline-popup-readme.txt" "scala-outline-popup-20141215.953/" "scala-mode2-20150113.2309/" "scala-mode-20170611.806/" "sbt-mode-20170708.1211/" "s-20170428.1026/" "ruby-tools-readme.txt" "ruby-tools-20151209.815/" "ruby-refactor-readme.txt" "ruby-refactor-20160214.850/" "ruby-hash-syntax-20141010.839/" "ruby-additional-readme.txt" "ruby-additional-20161115.2259/" "rspec-mode-20170312.56/" "rainbow-delimiters-20160430.2358/" "queue-0.1.1/" "projectile-readme.txt" "projectile-20170416.148/" "popup-20160709.729/" "pkg-info-20150517.443/" "paredit-20170405.1149/" "nzenburn-theme-20130513/" "neotree-readme.txt" "neotree-20170522.758/" "multi-term-readme.txt" "multi-term-20160619.233/" "macrostep-20161120.1306/" "load-theme-buffer-local-20120702.1336/" "let-alist-1.0.5/" "late-night-theme-0.0/" "jsfmt-20150727.1525/" "js2-mode-readme.txt" "js2-mode-20170624.1249/" "ir-black-theme-20130302.2355/" "inf-ruby-20170615.335/" "ido-ubiquitous-20170705.1656/" "ido-completing-read+-20170708.1116/" "heroku-theme-20150522.1919/" "haskell-mode-20170704.1445/" "gruber-darker-theme-20170330.1211/" "gratuitous-dark-theme-1.3/" "go-mode-20170308.1512/" "github-theme-20170630.1501/" "gandalf-theme-20130809.247/" "flymake-jslint-20130613.202/" "flymake-easy-20140818.55/" "flycheck-readme.txt" "flycheck-20170714.948/" "flatland-theme-20140805.305/" "exec-path-from-shell-20170508.4/" "epl-20150517.433/" "ensime-20170710.347/" "emmet-mode-20161113.2158/" "dockerfile-mode-20170418.1024/" "deep-thought-theme-0.1.1/" "dash-20170613.151/" "company-20170713.1554/" "color-theme-railscasts-0.0.2/" "color-theme-20080305.34/" "coffee-mode-readme.txt" "coffee-mode-20170324.240/" "clues-theme-20161213.327/" "clojure-mode-extra-font-locking-20170303.2310/" "clojure-mode-20170712.349/" "cider-20170715.36/" "base16-theme-20170713.1237/" "auto-complete-readme.txt" "auto-complete-20170124.1845/" "archives/" "ac-slime-20150729.2035/" "0blayout-readme.txt" "../" "./")
+
+ ("/Users/ryandurling/practice/docker-prac/ci/j8mysql/" (22708 48474 0 0) "my.cnf" "Dockerfile" ".git/" "../" "./")
+
+ ("/Users/ryandurling/practice/java/bship/" (22707 7959 0 0) "test-support/" "src/" "settings.gradle" "hooks/" "gradlew.bat" "gradlew" "gradle/" "game/" "ci/" "build.gradle" "build/" ".pairs" ".idea/" ".gradle/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/ryandurling/practice/docker-prac/chap7/composeapp/" (22689 7129 0 0) "requirements.txt" "app.py" "../" "./")
+
+ ("/Users/ryandurling/.emacs.d/custom/" (22660 63950 0 0) "web.el" "undo.el" "ui.el" "tree.el" "spellcheck.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "scala.el" "ruby.el" "mypopup.el" "lisp.el" "haskell.el" "go-setup.el" "elisp-editing.el" "editing.el" "docker-mode.el" "auto-indent.el" "auto-complete.el" "../" "./")
+
+ ("/Users/ryandurling/.emacs.d/elpa/dockerfile-mode-0.1/" (22660 63832 0 0) "dockerfile-mode.elc" "dockerfile-mode.el" "dockerfile-mode-pkg.el" "dockerfile-mode-autoloads.el" "../" "./")
+
+ ("/Users/ryandurling/.emacs.d/" (22660 63832 0 0) "tramp" "projectile-bookmarks.eld" "places" "modes/" "init.el~" "init.el" "ido.last" "gitStuff/" "elpa/" "custom/" "cider-history" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".recentf" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/ryandurling/practice/docker-prac/static_web/" (22660 63053 0 0) "Dockerfile" "../" "./")
+
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/constants/" (22093 6135 0 0) "ActionTypes.js" ".keep" "../" "./")
 
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/containers/Root/" (22093 6134 0 0) "index.js" "DevTools.js" "context.js" "../" "./")
@@ -252,8 +270,6 @@
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/reducers/" (22091 28470 0 0) "UserReducer.js" "ProductReducer.js" "index.js" "CartReducer.js" "../" "./")
 
  ("/Users/ryandurling/work/core/vagrant_pp/amazon/vagrant_ansible_pp/apps/front-end/pp-shopping/current/app/" (22090 35330 0 0) "views/" "utils/" "store/" "server.js" "router.js" "reducers/" "decorators/" "controllers/" "containers/" "constants/" "components/" "assets/" "app.js" "actions/" "../" "./")
-
- ("/Users/ryandurling/" (22090 19636 0 0) "work/" "VirtualBox VMs/" "tmp/" "Public/" "practice/" "Pictures/" "myconfig/" "Music/" "Movies/" "main.retry" "logfile" "Library/" "golang/" "Downloads/" "Documents/" "Desktop/" "deploy.retry" "Applications/" ".zshrc~" ".zshrc.pre-oh-my-zsh" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".zcompdump-Ryan’s MacBook Pro-5.1.1" ".zcompdump-Ryan’s MacBook Pro-5.0.8" ".zcompdump-Ryan’s MacBook Pro-5.0.5" ".WebStorm11/" ".WebStorm10/" ".viminfo" ".vagrant.d/" ".v8flags.4.6.85.28.ryandurling.json" ".tmp" ".subversion/" ".stack/" ".ssh/" ".rbenv/" ".psql_history" ".pry_history" ".profile" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node_repl_history" ".node-gyp/" ".mkshrc" ".lesshst" ".gitconfig" ".ghc/" ".gemrc" ".gem/" ".eslintrc" ".emacs.d/" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_profile" ".bash_history" ".babel.json" ".ansible/" "../" "./")
 
  ("/Users/ryandurling/work/shopping/" (22080 51108 0 0) "shopp/" "pp-shopping/" "../" "./")
 
@@ -291,8 +307,6 @@
 
  ("/Users/ryandurling/.emacs.d/elpa/jsfmt-20150727.1525/" (22083 44614 0 0) "jsfmt.elc" "jsfmt.el" "jsfmt-pkg.elc" "jsfmt-pkg.el" "jsfmt-autoloads.el" "../" "./")
 
- ("/Users/ryandurling/.emacs.d/elpa/" (22083 44614 0 0) "yasnippet-20151108.1505/" "yard-mode-20140816.1044/" "web-mode-20151110.2301/" "web-beautify-20131118.226/" "undo-tree-readme.txt" "undo-tree-20140509.522/" "tagedit-20150727.224/" "spinner-1.4/" "smex-20150822.1146/" "slim-mode-20140611.950/" "skewer-mode-20150914.1304/" "simple-httpd-20150430.1755/" "seq-20151028.759/" "s-20150924.406/" "ruby-tools-readme.txt" "ruby-tools-20140113.45/" "ruby-refactor-readme.txt" "ruby-refactor-20151026.1347/" "ruby-hash-syntax-20141010.839/" "ruby-additional-readme.txt" "ruby-additional-20150306.1759/" "rspec-mode-20151003.315/" "rake-20150831.158/" "rainbow-delimiters-20150320.17/" "queue-0.1.1/" "projectile-rails-readme.txt" "projectile-rails-20151110.747/" "projectile-20151024.943/" "popup-20150626.711/" "pkg-info-20150517.443/" "paredit-20150217.713/" "neotree-readme.txt" "neotree-20151101.607/" "multiple-cursors-20150710.456/" "multi-term-readme.txt" "multi-term-20150220.1320/" "let-alist-1.0.4/" "jsx-mode-20130908.1024/" "json-snatcher-20150511.2047/" "json-reformat-20151007.1728/" "json-mode-20150413.1948/" "jsfmt-readme.txt" "jsfmt-20150727.1525/" "js2-refactor-20151029.507/" "js2-mode-readme.txt" "js2-mode-20151108.1846/" "inflections-20121016.157/" "inf-ruby-20151104.1237/" "ido-ubiquitous-20151005.2131/" "ido-completing-read+-20151005.2131/" "haskell-mode-20151110.2309/" "flymake-jslint-20130613.202/" "flymake-easy-20140818.55/" "flymake-0.4.16/" "flycheck-20151106.559/" "f-20150605.927/" "exec-path-from-shell-20151006.2253/" "epl-20150517.433/" "enh-ruby-mode-readme.txt" "emmet-mode-20151005.1850/" "dash-20151021.113/" "coffee-mode-readme.txt" "coffee-mode-20151019.2009/" "clojure-mode-extra-font-locking-20150110.505/" "clojure-mode-20151110.341/" "cider-20151110.809/" "auto-complete-20150618.1949/" "archives/" "ac-js2-readme.txt" "ac-js2-20140906.442/" "0blayout-readme.txt" "../" "./")
-
  ("/Users/ryandurling/work/shopping/pp-shopping/app/components/Catalog/" (22082 27857 0 0) "index.js" "ContactPage.css" "../" "./")
 
  ("/Users/ryandurling/work/shopping/pp-shopping/app/components/Product/" (22074 32407 0 0) "View.js" "ListItemView.js" "index.js" "../" "./")
@@ -303,13 +317,9 @@
 
  ("/Users/ryandurling/work/shopping/pp-shopping/app/components/SearchBox/__tests__/" (22082 6656 0 0) "SearchBox.js" "../" "./")
 
- ("/Users/ryandurling/.emacs.d/" (22081 20755 0 0) "projectile-bookmarks.eld" "places" "init.el" "ido.last" "elpa/" "custom/" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".recentf" ".gitignore" ".git/" "../" "./")
-
  ("/Users/ryandurling/work/shopping/pp-shopping/config/webpack_conf/" (22080 53431 0 0) "constants.js" "base.js" "../" "./")
 
  ("/Users/ryandurling/work/shopping/pp-shopping/config/" (22080 53184 0 0) "webpack_conf/" "webpack.conf.js" "settings.js" "nightwatch.conf.js" "exposed.js" "env/" "dynamicEnv.js" "browserSync.js" "../" "./")
-
- ("/Users/ryandurling/.emacs.d/custom/" (22079 50560 0 0) "web.el" "undo.el" "ui.el" "tree.el" "spellcheck.el" "shell-integration.el" "setup-js.el" "setup-clojure.el" "scala.el" "ruby.el" "mypopup.el" "lisp.el" "haskell.el" "elisp-editing.el" "editing.el" "auto-indent.el" "auto-complete.el" "../" "./")
 
  ("/Users/ryandurling/work/shopping/pp-shopping/app/views/" (22074 32407 0 0) "index.jade" "index.html" "../" "./")
 
@@ -428,16 +438,6 @@
  ("/Users/ryandurling/practice/js-prac/beginner/myserver/" (22046 33666 0 0) "server.js" "router.js" "index.js" "../" "./")
 
  ("/Users/ryandurling/work/shopping/pp-shopping/lib/tasks/" (22038 31566 0 0) "start.js" "serve.js" "copy.js" "config.js" "clean.js" "bundle.js" "build.js" "../" "./")
-
- ("/Users/ryandurling/work/shopping/pp-shopping/app/components/CatalogPage/" (22037 36121 0 0) "package.json" "ContactPage.js" "ContactPage.css" "../" "./")
-
- ("/Users/ryandurling/work/shopping/pp-shopping/app/components/" (22037 34254 0 0) "variables.css" "SideBar/" "NotFoundPage/" "layout/" "ErrorPage/" "ContentPage/" "checkout/" "CatalogPage/" "../" "./")
-
- ("/Users/ryandurling/work/shopping/pp-shopping/app/stores/" (22028 13823 0 0) ".keep" "../" "./")
-
- ("/Users/ryandurling/work/shopping/pp-shopping/app/dispatcher/" (22028 13823 0 0) ".keep" "../" "./")
-
- ("/Users/ryandurling/practice/reduxprac/voting/voting-client/src/" (22032 26689 0 0) "reducer.js" "index.jsx" "components/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

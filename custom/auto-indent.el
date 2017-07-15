@@ -27,3 +27,10 @@
   (save-excursion
     (indent-region (point-min) (point-max) nil)))
 (global-set-key (kbd "C-c n") 'indent-buffer)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+          (lambda ()
+            (define-key yaml-mode-map "\C-m" 'newline-and-indent)))

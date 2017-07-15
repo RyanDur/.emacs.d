@@ -88,5 +88,7 @@ o              (lambda (arg) (ruby-end-of-block)) nil))
             (modify-syntax-entry ?: "."))) ;; Adds ":" to the word definition
 
 ;; Start projectile-rails
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
+;;(add-hook 'projectile-mode-hook 'projectile-rails-on)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
