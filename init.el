@@ -25,6 +25,10 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; With the most recent builds of Emacs, you can pin Alchemist to always use MELPA Stable
+;; by adding this to your Emacs initialization
+(add-to-list 'package-pinned-packages '(alchemist . "melpa-stable") t)
+
 ;; The packages you want installed. You can also install these
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
@@ -54,6 +58,10 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
+    dash
+    
+    popup
+
     ;; project navigation
     projectile
 
@@ -61,7 +69,50 @@
     rainbow-delimiters
 
     ;; edit html tags like sexps
-    tagedit))
+    tagedit
+
+    ;; Elixir tooling integration for emacs
+    ;; https://alchemist.readthedocs.io/en/latest/
+    alchemist
+
+    auto-complete
+
+    dockerfile-mode
+
+    go-mode
+    
+    go-autocomplete
+
+    haskell-mode
+
+    js2-mode
+
+    inf-ruby
+
+    ac-slime
+
+    clojure-mode
+
+    clojure-mode-extra-font-locking
+
+    coffee-mode
+
+    company
+
+    emmet-mode
+
+    ensime
+
+    ;; THEMES
+    deep-thought-theme
+    color-theme-railscasts    
+    color-theme
+    clues-theme
+    base16-theme
+    gratuitous-dark-theme
+    gruber-darker-theme
+    heroku-theme
+    ir-black-theme))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -100,6 +151,7 @@
 (load "shell-integration.el")
 (load "tree.el")
 (load "docker-mode.el")
+(load "elixir-setup.el")
 
 ;;(load "lisp.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
