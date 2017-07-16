@@ -16,11 +16,9 @@
                  :post-handlers '(sp-ruby-def-post-handler)
                  :actions '(insert navigate)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (add-hook 'alchemist-mode-hook                                                            ;;
-;;           (lambda ()                                                                      ;;
-;;             (add-hook 'after-change-major-mode-hook 'auto-complete-mode 'make-it-local))) ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (add-hook 'alchemist-mode-hook                                                ;;
 ;;           (lambda ()                                                          ;;
