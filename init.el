@@ -58,10 +58,14 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
+    ag
+
+    grizzl
+
     neotree
-    
+
     multi-term
-    
+
     flycheck
 
     dash
@@ -112,7 +116,7 @@
     ruby-tools
 
     smartparens
-    
+
     yard-mode
 
     ac-slime
@@ -172,7 +176,6 @@
 (load "web.el")
 (load "ruby.el")
 (load "setup-clojure.el")
-(load "setup-js.el")
 (load "setup-js.el")
 (load "shell-integration.el")
 (load "tree.el")

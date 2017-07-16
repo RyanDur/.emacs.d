@@ -6,6 +6,7 @@ gitStuff/
 modes/
 places
 projectile-bookmarks.eld
+projectile.cache
 .recentf
 .smex-items
 cider-history
