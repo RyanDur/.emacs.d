@@ -58,9 +58,19 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
-    dash
+    neotree
     
+    multi-term
+    
+    flycheck
+
+    dash
+
     popup
+
+    undo-tree
+
+    web-mode
 
     ;; project navigation
     projectile
@@ -75,19 +85,35 @@
     ;; https://alchemist.readthedocs.io/en/latest/
     alchemist
 
+    yaml-mode
+
     auto-complete
 
     dockerfile-mode
 
     go-mode
-    
+
     go-autocomplete
 
     haskell-mode
 
     js2-mode
 
+    rspec-mode
+
+    ruby-refactor
+
     inf-ruby
+
+    ruby-hash-syntax
+
+    ruby-additional
+
+    ruby-tools
+
+    smartparens
+    
+    yard-mode
 
     ac-slime
 
@@ -105,7 +131,7 @@
 
     ;; THEMES
     deep-thought-theme
-    color-theme-railscasts    
+    color-theme-railscasts
     color-theme
     clues-theme
     base16-theme
