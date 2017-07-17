@@ -214,3 +214,4 @@
  '(package-selected-packages
    (quote
     (dockerfile-mode yaml-mode zenburn-theme yard-mode web-mode undo-tree ujelly-theme tagedit smex slime-js slim-mode skewer-mode scss-mode scala-outline-popup ruby-tools ruby-refactor ruby-hash-syntax ruby-additional rspec-mode rainbow-delimiters projectile paredit nzenburn-theme neotree multi-term load-theme-buffer-local late-night-theme jsfmt ir-black-theme inf-ruby ido-ubiquitous heroku-theme haskell-mode gruber-darker-theme gratuitous-dark-theme go-mode github-theme gandalf-theme flymake-jslint flycheck flatland-theme exec-path-from-shell ensime emmet-mode deep-thought-theme color-theme-railscasts coffee-mode clues-theme clojure-mode-extra-font-locking cider base16-theme ac-slime))))
+(put 'upcase-region 'disabled nil)
