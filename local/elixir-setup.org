@@ -1,0 +1,14 @@
+
+
+#+BEGIN_SRC emacs-lisp
+(use-package alchemist
+  :ensure t
+  :bind (:map elixir-mode-map
+              ("C-c t" . alchemist-goto-definition-at-point)
+              ("C-c f" . alchemist-goto-jump-back))
+  :init
+  (setq alchemist-hooks-test-on-save t)
+  (setq alchemist-test-display-compilation-output t)
+  (setq alchemist-hooks-compile-on-save t)
+  (add-hook 'elixir-mode-hook 'alchemist-mode))
+#+END_SRC
