@@ -117,114 +117,14 @@
 
 * Version Control with magit and Diffing with ediff
 
-  Once we have things up and running, really the most basic thing is
-  version control. This allows us to add everything else we need in an
-  organised manner. Once we have this we can bootstrap everything
-  else.
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package magit
-      :ensure t
-      :bind (("C-c g" . magit-status)))
-  #+END_SRC
-
-  Once we do have version control and can do things with ediff, which
-  is a great mode for looking at diffs between versions, buffer, files
-  and directory trees, I want to fix how the windows work as the
-  default annoys me when it creates separate frames. We much rather
-  move around windows inside the one emacs frame.
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package ediff
-      :config
-      (setq ediff-window-setup-function 'ediff-setup-windows-plain))
-  #+END_SRC
-
-** link to github
-
    #+BEGIN_SRC emacs-lisp
-     (use-package git-link
-       :ensure t)
-   #+END_SRC
-
-** Step through those versions of a file with the time machine
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package git-timemachine
-       :ensure t)
-   #+END_SRC
-
-** See last commit for this line in a popup
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package git-messenger
-       :ensure t)
-   #+END_SRC
-
-** Delete that trailing whitespace
-
-   Trailing whitespace just causes trouble with diffs and version
-   control. So let's get rid of it.
-
-   #+BEGIN_SRC emacs-lisp
-     (add-hook 'before-save-hook
-               (lambda nil
-                 (delete-trailing-whitespace)))
+     (org-babel-load-if-exists "local/version-control.org")
    #+END_SRC
 
 * Make it pretty
-** Colours
-
-   It seems trivial, but it is one of the first things I do after I
-   get the basics up and running. I like to get my colours and other
-   basic window chrome and geegaws right.
 
    #+BEGIN_SRC emacs-lisp
-     (use-package color-theme-sanityinc-tomorrow
-       :ensure t
-       :load-path "themes"
-       :config
-       (load-theme 'sanityinc-tomorrow-bright t))
-   #+END_SRC
-
-** Bars, columns and lines
-
-   I don't want a tool bar or a scroll bar ever and I don't want a
-   menu when I'm in a terminal window.  I do like the menu ot discover
-   new things and keybindings when I'm using emacs as an X
-   application.
-
-   #+BEGIN_SRC emacs-lisp
-     ;; no toolbar
-     (tool-bar-mode -1)
-
-     ;; no menu in a terminal
-     (unless window-system
-       (menu-bar-mode -1))
-
-     ;; no scroll bar
-     (scroll-bar-mode -1)
-
-     ;; no horizontal scroll bar
-     (when (boundp 'horizontal-scroll-bar-mode)
-       (horizontal-scroll-bar-mode -1))
-   #+END_SRC
-
-   I also like to have an idea of where I am in the file so I'd like
-   line and column numbers.
-
-   #+BEGIN_SRC emacs-lisp
-     (line-number-mode 1)
-     (column-number-mode 1)
-   #+END_SRC
-
-** Startup Screen
-
-   I'd also like to skip the startup screen and go straight to the
-   *scratch* buffer.
-
-   #+BEGIN_SRC emacs-lisp
-     (setq inhibit-startup-screen t)
+     (org-babel-load-if-exists "local/visual-preferences.org")
    #+END_SRC
 
 * Programming
@@ -305,7 +205,7 @@
 *** auto format
 
     #+BEGIN_SRC emacs-lisp
-    (org-babel-load-if-exists "local/auto-format.el")
+    (org-babel-load-if-exists "local/auto-format.org")
     #+END_SRC
 
 *** undo help
