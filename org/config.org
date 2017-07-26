@@ -323,7 +323,8 @@
               cider-font-lock-dynamically '(macro core function var)
               cider-overlays-use-font-lock t
               cider-pprint-fn 'fipp
-              cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))"))
+              cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+              (add-hook 'after-save-hook 'cider-refresh))
     #+END_SRC
 
     clj-refactor lets us move a lot of things around and get less
