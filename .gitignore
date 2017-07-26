@@ -31,3 +31,4 @@ ido.last
 emojis/
 local/**/*.el
 org/**/*.el
+url
