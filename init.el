@@ -60,7 +60,8 @@
         (haskell-mode . "melpa-stable")
         (js2-mode . "melpa-stable")
         (tagedit . "melpa-stable")
-        (emmet-mode . "melpa-stable")))
+        (emmet-mode . "melpa-stable")
+        (all-the-icons . "melpa")))
 
 (package-initialize)
 
