@@ -1,0 +1,75 @@
+* SQL setup
+** beautify sql
+
+   #+BEGIN_SRC emacs-lisp
+     (defun sql-beautify-region (beg end)
+       "Beautify SQL in region between beg and END."
+       (interactive "r")
+       (save-excursion
+         (shell-command-on-region beg end "anbt-sql-formatter" nil t)))
+
+     (defun sql-beautify-buffer ()
+     "Beautify SQL in buffer."
+       (interactive)
+       (sql-beautify-region (point-min) (point-max)))
+
+     (defun sql-beautify-region-or-buffer ()
+     "Beautify SQL for the entire buffer or the marked region between beg and end"
+       (interactive)
+       (if (use-region-p)
+         (sql-beautify-region (region-beginning) (region-end))
+        (sql-beautify-buffer)))
+
+     (add-hook 'sql-mode-hook '(lambda ()
+     ;; beautify region or buffer
+       (local-set-key (kbd "C-c n") 'sql-beautify-region-or-buffer)))
+   #+END_SRC
+
+** UPCASE the good word
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package sqlup-mode
+       :ensure t
+       :config
+       (add-hook 'sql-mode-hook 'sqlup-mode)
+       (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
+       (global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region))
+   #+END_SRC
+
+** SQL client
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package ejc-sql
+       :ensure t
+       :config
+       (setq nrepl-sync-request-timeout 60)
+       (ejc-create-connection "MySQL-db-connection"
+       :classpath (concat "~/.m2/repository/mysql/mysql-connector-java/6.0.6/"
+                          "mysql-connector-java-6.0.6.jar")
+       :classname "com.mysql.jdbc.Driver"
+       :subprotocol "mysql"
+       :subname (concat "//localhost:3306/a_database?"
+                        "characterEncoding=utf8&"
+                        "useUnicode=true&"
+                        "useJDBCCompliantTimezoneShift=true&"
+                        "useLegacyDatetimeCode=false&"
+                        "serverTimezone=UTC&"
+                        "useSSL=false")
+       :user "root"
+       :password "")
+              (ejc-create-connection "MySQL-docker-compose-db-connection"
+       :classpath (concat "~/.m2/repository/mysql/mysql-connector-java/6.0.6/"
+                          "mysql-connector-java-6.0.6.jar")
+       :classname "com.mysql.cj.jdbc.Driver"
+       :subprotocol "mysql"
+       :subname (concat "//0.0.0.0:3306/game_console?"
+                        "characterEncoding=utf8&"
+                        "useUnicode=true&"
+                        "useJDBCCompliantTimezoneShift=true&"
+                        "useLegacyDatetimeCode=false&"
+                        "serverTimezone=UTC&"
+                        "useCursorFetch=false&"
+                        "useSSL=false")
+       :user "root"
+       :password "whateverwewant"))
+   #+END_SRC

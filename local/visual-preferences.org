@@ -52,4 +52,5 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq inhibit-startup-screen t)
+     (setq initial-scratch-message ";; scratch buffer created -- happy hacking\n")
    #+END_SRC

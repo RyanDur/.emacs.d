@@ -53,7 +53,7 @@
         (use-package . "melpa-stable")
         (with-editor . "melpa-stable")
         (yasnippet . "melpa-stable")
-        (grizzl . "melpa-stable")
+        (grizzl . "melpa")
         (neotree . "melpa2")
         (undo-tree . "elpa")
         (yaml-mode . "melpa-stable")
@@ -61,7 +61,10 @@
         (js2-mode . "melpa-stable")
         (tagedit . "melpa-stable")
         (emmet-mode . "melpa-stable")
-        (all-the-icons . "melpa")))
+        (all-the-icons . "melpa")
+        (multiple-cursors . "melpa")
+        (sqlup-mode . "melpa")
+        (ejc-sql . "melpa")))
 
 (package-initialize)
 
@@ -92,78 +95,4 @@
 
 (if (eq system-type 'darwin)
     (add-to-list 'package-pinned-packages 'exec-path-from-shell))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (dolist (p package-pinned-packages)	 ;;
-;;   (when (not (package-installed-p p)) ;;
-;;     (package-install p)))		 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (org-babel-load-file (concat user-emacs-directory "org/config.org"))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;; ;; Author: flyingmachine                                                                                         ;;
-;; ;; Title: init.el                                                                                                ;;
-;; ;; From: https://github.com/flyingmachine/emacs-for-clojure/blob/master/init.el                                  ;;
-;;                                                                                                                  ;;
-;; ;; Download the ELPA archive description if needed.                                                              ;;
-;; ;; This informs Emacs about the latest versions of all packages, and                                             ;;
-;; ;; makes them available for download.                                                                            ;;
-;; (when (not package-archive-contents)                                                                             ;;
-;;   (package-refresh-contents))                                                                                    ;;
-;;                                                                                                                  ;;
-;; ;; With the most recent builds of Emacs, you can pin Alchemist to always use MELPA Stable                        ;;
-;; ;; by adding this to your Emacs initialization                                                                   ;;
-;; (add-to-list 'package-pinned-packages '(alchemist . "melpa-stable") t)                                           ;;
-;;                                                                                                                  ;;
-;; ;; The packages you want installed. You can also install these                                                   ;;
-;; ;; manually with M-x package-install                                                                             ;;
-;; ;; Add in your own as you wish:                                                                                  ;;
-;; (defvar my-packages                                                                                              ;;
-;;   '())                                                                                                           ;;
-;;                                                                                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;;                                                  ;;
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;;                                                                                                                  ;;
-;;                                                                                                                  ;;
-;;                                                                                                                  ;;
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;; (add-to-list 'load-path "~/.emacs.d/custom")                                                                     ;;
-;; (load "ui.el")                                                                                                   ;;
-;; (load "mypopup.el")                                                                                              ;;
-;; (load "editing.el")                                                                                              ;;
-;; (load "elisp-editing.el")                                                                                        ;;
-;; (load "auto-complete.el")                                                                                        ;;
-;; (load "auto-indent.el")                                                                                          ;;
-;; (load "spellcheck.el")                                                                                           ;;
-;; (load "undo.el")                                                                                                 ;;
-;; (load "haskell.el")                                                                                              ;;
-;; (load "web.el")                                                                                                  ;;
-;; (load "ruby.el")                                                                                                 ;;
-;; (load "setup-clojure.el")                                                                                        ;;
-;; (load "setup-js.el")                                                                                             ;;
-;; (load "shell-integration.el")                                                                                    ;;
-;; (load "tree.el")                                                                                                 ;;
-;; (load "docker-mode.el")                                                                                          ;;
-;; (load "elixir-setup.el")                                                                                         ;;
-;;                                                                                                                  ;;
-;; ;;(load "lisp.el")                                                                                               ;;
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;; (global-auto-revert-mode 1)                                                                                      ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

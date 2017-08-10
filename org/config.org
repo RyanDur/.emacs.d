@@ -93,6 +93,7 @@
 *** Narrowing the region to what I want to look at
 
 
+
     This isn't needed quite so much now that searches, regexp and
     otherwise operate, sometimes annoyingly to an old timer like me, on
     the region rather than the whole buffer window. I still like to
@@ -101,6 +102,12 @@
 
     #+BEGIN_SRC emacs-lisp
       (put 'narrow-to-region 'disabled nil)
+    #+END_SRC
+
+*** typing yes or no is annoying
+
+    #+BEGIN_SRC emacs-lisp
+    (fset 'yes-or-no-p 'y-or-n-p)
     #+END_SRC
 
 ** custom.el
@@ -118,15 +125,15 @@
 
 * Version Control with magit and Diffing with ediff
 
-   #+BEGIN_SRC emacs-lisp
+  #+BEGIN_SRC emacs-lisp
      (org-babel-load-if-exists "local/version-control.org")
-   #+END_SRC
+  #+END_SRC
 
 * Make it pretty
 
-   #+BEGIN_SRC emacs-lisp
+  #+BEGIN_SRC emacs-lisp
      (org-babel-load-if-exists "local/visual-preferences.org")
-   #+END_SRC
+  #+END_SRC
 
 * Programming
 
@@ -161,11 +168,16 @@
     easier ways.
 
     #+BEGIN_SRC emacs-lisp
+      (use-package grizzl
+        :ensure t
+        :diminish projectile-mode)
+
       (use-package projectile
         :ensure t
         :diminish projectile-mode
         :config
         (setq projectile-enable-caching t)
+        (setq projectile-completion-system 'grizzl)
         (projectile-global-mode 1))
     #+END_SRC
 
@@ -201,7 +213,7 @@
 
     #+BEGIN_SRC emacs-lisp
     (org-babel-load-if-exists "local/tree.org")
-     #+END_SRC
+    #+END_SRC
 
 *** auto format
 
@@ -215,6 +227,48 @@
     (use-package undo-tree
     :ensure t
     :config (global-undo-tree-mode))
+    #+END_SRC
+
+*** Commenting
+
+    #+BEGIN_SRC emacs-lisp
+    (defun toggle-comment-on-line ()
+      "comment or uncomment current line"
+      (interactive)
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+    (global-set-key (kbd "C-;") 'toggle-comment-on-line)
+    #+END_SRC
+
+*** Toggle buffer
+
+    #+BEGIN_SRC emacs-lisp
+    (defun toggle-window-split ()
+    (interactive)
+    (if (= (count-windows) 2)
+      (let* ((this-win-buffer (window-buffer))
+         (next-win-buffer (window-buffer (next-window)))
+	 (this-win-edges (window-edges (selected-window)))
+	 (next-win-edges (window-edges (next-window)))
+	 (this-win-2nd (not (and (<= (car this-win-edges)
+					(car next-win-edges))
+				 (<= (cadr this-win-edges)
+					 (cadr next-win-edges)))))
+	     (splitter
+	      (if (= (car this-win-edges)
+		     (car (window-edges (next-window))))
+		  'split-window-horizontally
+		'split-window-vertically)))
+	(delete-other-windows)
+	(let ((first-win (selected-window)))
+	  (funcall splitter)
+	  (if this-win-2nd (other-window 1))
+	  (set-window-buffer (selected-window) this-win-buffer)
+	  (set-window-buffer (next-window) next-win-buffer)
+	  (select-window first-win)
+	  (if this-win-2nd (other-window 1))))))
+
+
+    (global-set-key (kbd "C-x t") 'toggle-window-split)
     #+END_SRC
 
 ** Lisps
@@ -404,6 +458,12 @@
 
    #+BEGIN_SRC emacs-lisp
      (org-babel-load-if-exists "local/elixir-setup.org")
+   #+END_SRC
+
+** SQL
+
+   #+BEGIN_SRC emacs-lisp
+     (org-babel-load-if-exists "local/sql-setup.org")
    #+END_SRC
 
 * Text Modes
@@ -923,6 +983,18 @@
     #+BEGIN_SRC emacs-lisp
       (use-package scss-mode
         :ensure t)
+    #+END_SRC
+
+*** multiple cursors
+
+    #+BEGIN_SRC emacs-lisp
+      (use-package multiple-cursors
+        :ensure t
+        :config
+        (global-set-key (kbd "C-x g") 'mc/edit-lines)
+        (global-set-key (kbd "C-j") 'mc/mark-next-like-this)
+        (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+        (global-set-key (kbd "C-x C-j") 'mc/mark-all-like-this))
     #+END_SRC
 
 * Other Modes
